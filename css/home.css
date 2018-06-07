@@ -1,0 +1,246 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #444444;
+    text-align: center;
+    -webkit-text-size-adjust: 100%;
+
+}
+
+@font-face {
+    font-family: "Hind";
+    font-style: normal;
+    font-weight: 400; src: local("Hind Regular"), local("Hind-Regular"), url("https://fonts.gstatic.com/s/hind/v8/5aU69_a8oxmIdGl4BA.woff2") format("woff2");
+    unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/**------------ DESIGN LOGO-------------- **/
+
+
+.navigation-bar ul {
+    padding: 4px;
+    margin-bottom: 0px;
+    text-align: right;
+    float: right;
+}
+
+/* ------------- WHOLE LAYOUT OF THE PAGE------------------*/
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.wrapper > * {
+    padding: 0px;
+    flex: 1 100%;
+}
+
+
+.header {
+    background: #344a71;
+}
+
+.footer {
+    background: #444444;
+    padding: 10px;
+    /*flex: 1 100%;*/
+    color: #ffffff;
+
+}
+
+.main {
+    text-align: left;
+    text-justify: auto;
+    background: #ffffff;
+}
+
+.aside-1 {
+    background:	#ffffff;
+}
+
+.aside-2 {
+    background:	#ffffff;
+}
+
+@media all and (min-width: 600px) {
+    .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+    .main    { flex: 3 0; }
+    .aside-1 { order: 1; }
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+}
+
+
+/* ------------- NAVIGATION OF THE PAGE------------------*/
+
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+
+    background: #344a71;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-end;
+
+
+    padding: 10px;
+    font-size: 10pt;
+    text-align: right;
+    float: right;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1.5em;
+    color: #ffffff;
+}
+
+.navigation a:hover {
+    background: #ffff00;
+    color: #344a71;
+}
+
+
+/*--------- FOR SMALLER SCREENS----------*/
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+    .navigation-logo {
+        margin-right: 350px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+
+    .navigation-logo {
+        margin-right: 150px;
+    }
+}
+
+/****THE FORM OF THE PAGE CHECK IN, OUT, GUESTS, CODE*****/
+#book_reservation {
+    width: 900px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-end;
+
+    box-sizing: border-box;
+}
+
+/** Content of the page **/
+input{
+    height: 40px;
+    background-color: #344a71;
+    margin: 0 auto;
+    margin-left: 20px;
+    padding-left: 15px;
+    -moz-border-radius: 25px;
+    border-radius: 3px;
+    font-size: 9pt;
+    display: flex;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+/* Select */
+select{
+    background-color: #344a71;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    padding: 1px;
+    font-size: 9px;
+    color: #ffffff;
+}
+
+select[size].adults {
+    height: 44px;
+    width: 10%;
+    font-size: 12px;
+    margin-left: 20px;
+    border: 1px solid #ffffff;
+    background-color: #344a71;
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+}
+
+.reservation {
+    font-size: 9pt;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: 5px;
+    margin-right: 8px;
+    background-color: #344a71;
+}
+
+
+/*********** PLACE HOLDER COLOR ***/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #ffffff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #ffffff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #ffffff;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #ffffff;
+}
+/*********** PLACE HOLDER COLOR ***/
+
+
+/** Content of the page **/
+input{
+    height: 40px;
+    background-color: #344a71;
+    margin: 0 auto;
+    margin-left: 20px;
+    padding-left: 15px;
+    -moz-border-radius: 25px;
+    border-radius: 10px;
+    font-size: 13pt; /** Increase the placeholder size **/
+    display: flex;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}

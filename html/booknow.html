@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Hotel Now!!</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/booknow.css">
+    <link rel="stylesheet" href="../css/links/style-Arrangement.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <!-- HEADER LOGO BEGINNING -->
+        <header class="header">
+
+            <a name="home"></a>
+            <div class="navigation-bar">
+                <div class="navigation-container">
+                    <img class="navigation-logo" style="width: 230px; height: 50px; margin-right: 450px;" src="../img/logo3.png" alt="David Hotel Belgrade">
+
+                    <ul class="navigation">
+                        <li><a href="../index.html">HOME</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+        <article class="main">
+            <form action="" id="book_reservation">
+                <div class="form-all">
+                    <ul>
+                        <!-- HEADER -->
+                        <br>
+                        <li>
+                            <h1 class="form-header" style="color: #344a71">
+                                Hotel Booking
+                            </h1>
+                        </li>
+                        <br>
+
+                        <!-- NAME AND LASTNAME -->
+                        <li>
+                            <label>Name</label>
+                            <span> *</span>
+                            <div>
+                                <input type="text" class="name firstname" placeholder="First Name">
+                                <input type="text" class="name lastname" placeholder="Last Name">
+                            </div>
+                        </li>
+                        <br>
+
+                        <!-- EMAIL -->
+                        <li>
+                            <label>Email</label>
+                            <span> *</span>
+                            <div>
+                                <input type="text" class="name email" placeholder="Email Address" size="30">
+                            </div>
+                        </li>
+                        <br>
+
+                        <!-- ROOM TYPE -->
+                        <li>
+                            <label>Room Type</label>
+                            <span> *</span>
+                            <div>
+                                <select name="roomtype" id="roomId">
+                                    <option selected disabled value="-1">Pick a room</option>
+                                    <option value="1">Ambassador Suite</option>
+                                    <option value="2">Junior Suite</option>
+                                    <option value="3">Premium Suite</option>
+                                    <option value="5">Premium Suite</option>
+                                    <option value="4">Family Room</option>
+                                    <option value="6">Premium Plus</option>
+                                </select>
+                            </div>
+                        </li>
+                        <br>
+
+                        <!-- #NO OF GUEST -->
+                        <li>
+                            <label>Number of Guests</label>
+                            <span> *</span>
+                            <div>
+                                <select name="guest" id="guest">
+                                    <option selected disabled value="-1">Number of Guest</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="5">4</option>
+                                    <option value="4">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </li>
+                        <br>
+
+                        <!-- #NO OF CHILDREN -->
+                        <li>
+                            <label>Number of Childrens</label>
+                            <span> *</span>
+                            <div>
+                                <select name="guest" id="children">
+                                    <option selected disabled value="-1">Number of Children</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="5">4</option>
+                                    <option value="4">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </li>
+                        <br>
+
+                        <!-- ARRIVAL TIME AND DATE -->
+                        <li>
+                            <label>Arrival Date & Time</label>
+                            <span> *</span>
+                            <!-- Day, Month, Year -->
+                            <div id="birthday" data-name="birthday_wrapper">
+                                <span id="birthday-tag-span">
+                                    <select aria-label="Day" name="birthday_day" id="day" title="Day" required autocomplete="on">
+                                        <option value="0" selected disabled="">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                                    </select>
+                                    <select aria-label="Month" name="birthday_month" id="month" title="Month" required autocomplete="on">
+                                        <option value="0" selected disabled>Month</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                                    </select>
+                                    <select aria-label="Year" name="birthday_year" id="year" title="Year" required autocomplete="on">
+                                        <option value="0" selected disabled="">Year</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option><option value="1909">1909</option><option value="1908">1908</option><option value="1907">1907</option><option value="1906">1906</option><option value="1905">1905</option>
+                                    </select>
+                                </span>
+
+                                <span class="date-separate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                                <!-- TIME -->
+
+                                <select class="currentTime" id="hour">
+                                    <option selected disabled>Hour</option>
+                                    <option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="3"> 3 </option>
+                                    <option value="4"> 4 </option>
+                                    <option value="5"> 5 </option>
+                                    <option value="6"> 6 </option>
+                                    <option value="7"> 7 </option>
+                                    <option value="8"> 8 </option>
+                                    <option value="9"> 9 </option>
+                                    <option value="10"> 10 </option>
+                                    <option value="11"> 11 </option>
+                                    <option value="12"> 12 </option>
+                                </select>
+                                <span class="date-separate">&nbsp;:</span>
+
+                                <!-- Minutes -->
+                                <span class="form-sub-label-container" style="vertical-align:top">
+                                    <select id="minute">
+                                        <option value="0" selected disabled="">Minutes</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                                        <option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+                                    </select>
+                                    <span class="date-separate">&nbsp;:</span> <!-- space -->
+                                 </span>
+
+                                <span style="vertical-align:top">
+                                    <select>
+                                        <option selected disabled>AM & PM</option>
+                                        <option value="AM"> AM </option>
+                                        <option value="PM"> PM </option>
+                                    </select>
+                                </span>
+                            </div>
+                        </li>
+                        <br>
+
+                        <!-- DEPARTURE TIME AND DATE -->
+                        <li>
+                            <label>Departure Date & Time</label>
+                            <span> *</span>
+                            <!-- Day, Month, Year -->
+                            <div id="departure_birthday" data-name="birthday_wrapper">
+                                <span id="departure_birthday-tag-span">
+                                    <select aria-label="Day" name="birthday_day" id="departure_day" title="Day" required autocomplete="on">
+                                        <option value="0" selected disabled="">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                                    </select>
+                                    <select aria-label="Month" name="birthday_month" id="departure_month" title="Month" required autocomplete="on">
+                                        <option value="0" selected disabled>Month</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                                    </select>
+                                    <select aria-label="Year" name="birthday_year" id="departure_year" title="Year" required autocomplete="on">
+                                        <option value="0" selected disabled="">Year</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option><option value="1909">1909</option><option value="1908">1908</option><option value="1907">1907</option><option value="1906">1906</option><option value="1905">1905</option>
+                                    </select>
+                                </span>
+
+                                <span class="date-separate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                                <!-- TIME -->
+
+                                <select class="currentTime" id="departure_hour">
+                                    <option selected disabled>Hour</option>
+                                    <option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="3"> 3 </option>
+                                    <option value="4"> 4 </option>
+                                    <option value="5"> 5 </option>
+                                    <option value="6"> 6 </option>
+                                    <option value="7"> 7 </option>
+                                    <option value="8"> 8 </option>
+                                    <option value="9"> 9 </option>
+                                    <option value="10"> 10 </option>
+                                    <option value="11"> 11 </option>
+                                    <option value="12"> 12 </option>
+                                </select>
+                                <span class="date-separate">&nbsp;:</span>
+
+                                <!-- Minutes -->
+                                <span class="form-sub-label-container" style="vertical-align:top">
+                                    <select id="departure_minute">
+                                        <option value="0" selected disabled="">Minutes</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                                        <option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+                                    </select>
+                                    <span class="date-separate">&nbsp;:</span> <!-- space -->
+                                 </span>
+
+                                <span style="vertical-align:top">
+                                    <select>
+                                        <option selected disabled>AM & PM</option>
+                                        <option value="AM"> AM </option>
+                                        <option value="PM"> PM </option>
+                                    </select>
+                                </span>
+                            </div>
+                        </li>
+                        <br>
+
+                        <li>
+                            <label>Free Pickup</label>
+                            <span> *</span>
+                            <div>
+                                <span style="vertical-align:top">
+                                    <select>
+                                        <option selected disabled>Free Pickup</option>
+                                        <option value="AM"> Yes Please! - Pick me up on arrival </option>
+                                        <option value="PM"> No Thanks - I'll make my own way there </option>
+                                    </select>
+                                </span>
+                            </div>
+                        </li>
+                        <br>
+
+                        <li>
+                            <label>Passport Number</label>
+                            <span> *</span>
+                            <div>
+                                <input type="text" placeholder="A11163131">
+                            </div>
+                        </li>
+                        <br>
+
+                        <li>
+                            <label>Special Request [ Optional ]</label>
+                            <div>
+                                <textarea class="form-textarea" cols="35" rows="4" data-component="textarea" placeholder="Additional Information"></textarea>
+                            </div>
+                        </li>
+                        <br>
+
+                        <li>
+                            <button style="font-size: 15pt" >Submit</button>
+                        </li>
+                        <br><br>
+                    </ul>
+                </div>
+            </form>
+        </article>
+
+
+        <!-- LEFT BEGINNING -->
+        <aside class="aside aside-1">.</aside>
+        <!-- LEFT END
+
+        <!-- LEFT BEGINNING -->
+        <aside class="aside aside-2">.</aside>
+        <!-- LEFT END -->
+
+
+        <!-- FOOTER BEGINNING -->
+        <footer class="footer">
+
+
+            <!-- FOOTER CENTER -->
+            <div class="footer_center">
+                <div class="text">
+                    <h4>CONTACT INFORMATION</h4>
+                    <a name="contact"></a>
+                    <p style="margin-top: 0; padding-top: 5px;"><i></i> Danijelova 32, 11000 Belgrade, Serbia</p>
+                    <p><i class="phone"></i> <a href="tel:+381623340023">+381 623 340 023</a></p>
+                    <p><i class="mail"></i> <a href="mailto:office@davidhotel.com">office@davidhotel.com</a></p>
+                    <p>@2018 DAVID'S HOTEL</p>
+                </div>
+            </div>
+            <!-- END / FOOTER CENTER -->
+
+        </footer>
+        <!-- FOOTER END -->
+    </div>
+</body>
+</html>

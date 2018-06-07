@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="../css/links/style-Arrangement.css">
+    <link rel="stylesheet" href="../css/links/google-api-fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .form-style-6{
+            font: 95% Arial, Helvetica, sans-serif;
+            max-width: 400px;
+            margin: 0px;
+            padding: 16px;
+            background: #FFFFFF;
+        }
+        .form-style-6 h1{
+            background: #344a71;
+            padding: 10px;
+            font-size: 140%;
+            font-weight: 300;
+            text-align: center;
+            color: #fff;
+        }
+        .form-style-6 input[type="text"],
+        .form-style-6 input[type="date"],
+        .form-style-6 input[type="datetime"],
+        .form-style-6 input[type="email"],
+        .form-style-6 input[type="number"],
+        .form-style-6 input[type="search"],
+        .form-style-6 input[type="time"],
+        .form-style-6 input[type="url"],
+        .form-style-6 textarea,
+        .form-style-6 select
+        {
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            outline: none;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            width: 100%;
+            background: #fff;
+            margin-bottom: 4%;
+            border: 1px solid #ccc;
+            padding: 3%;
+            color: #555;
+            font: 95% Arial, Helvetica, sans-serif;
+        }
+        .form-style-6 input[type="text"]:focus,
+        .form-style-6 input[type="date"]:focus,
+        .form-style-6 input[type="datetime"]:focus,
+        .form-style-6 input[type="email"]:focus,
+        .form-style-6 input[type="number"]:focus,
+        .form-style-6 input[type="search"]:focus,
+        .form-style-6 input[type="time"]:focus,
+        .form-style-6 input[type="url"]:focus,
+        .form-style-6 textarea:focus,
+        .form-style-6 select:focus
+        {
+            box-shadow: 0 0 5px #344a71;
+            padding: 3%;
+            border: 1px solid #344a71;
+        }
+
+        .form-style-6 input[type="submit"],
+        .form-style-6 input[type="button"]{
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            width: 20%;
+            background: #344a71;
+            border-bottom: 2px solid #344a71;
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;
+            color: #fff;
+        }
+        .form-style-6 input[type="submit"]:hover,
+        .form-style-6 input[type="button"]:hover{
+            background: #344a71;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- HEADER LOGO BEGINNING -->
+        <header class="header">
+            <div class="navigation-bar">
+                <div class="navigation-container">
+                    <img class="navigation-logo" style="width: 230px; height: 50px; margin-right: 450px;" src="../img/logo3.png" alt="David Hotel Belgrade">
+
+                    <ul class="navigation">
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="../html/room.html">ROOMS AND SUITES</a></li>
+                        <li><a href="../html/contact.html">CONTACT US</a></li>
+                        <li><a href="../html/booknow.html">BOOK ONLINE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+
+        </header>
+        <!-- HEADER LOGO END -->
+
+
+        <article class="main">
+            <div class="w3-content" style="max-width:1532px;">
+                <br>
+
+                <!-- ABOUT US & LOCATION-->
+                <div class="w3-row-padding" id="about">
+                    <div>
+                        <h2 style="color: #344a71" >DAVID'S HOTEL SERBIA</h2>
+                    </div>
+                    <br>
+                    <!-- MAP BEGINNING -->
+                    <div id="map" style="height:500px; width: 100%;"></div>
+                    <!-- MAP END -->
+                    <br><br>
+                    <div class="form-style-6">
+                        <h1>Contact Us</h1>
+                        <form>
+
+                            <input type="text" name="field1" placeholder="Your Name">
+                            <input type="email" name="field2" placeholder="Email Address">
+                            <textarea name="field3" placeholder="Type your Message"></textarea>
+                            <input type="submit" value="Send">
+                        </form>
+                    </div>
+                    <br><br>
+                </div>
+             <!-- End page content -->
+            </div>
+            <br><br><br>
+
+        </article>
+
+        <!-- LEFT BEGINNING -->
+        <aside class="aside aside-1">.</aside>
+        <!-- LEFT END
+
+        <!-- LEFT BEGINNING -->
+        <aside class="aside aside-2">.</aside>
+        <!-- LEFT END -->
+
+
+        <!-- FOOTER BEGINNING -->
+        <footer class="footer">
+
+
+            <!-- FOOTER CENTER -->
+            <div class="footer_center">
+                <div class="text">
+                    <h4>CONTACT INFORMATION</h4>
+                    <a name="contact"></a>
+                    <p style="margin-top: 0; padding-top: 5px;"><i></i> Danijelova 32, 11000 Belgrade, Serbia</p>
+                    <p><i class="phone"></i> <a href="tel:+381623340023">+381 623 340 023</a></p>
+                    <p><i class="mail"></i> <a href="mailto:office@davidhotel.com">office@davidhotel.com</a></p>
+                    <p>@2018 DAVID'S HOTEL</p>
+                </div>
+            </div>
+            <!-- END / FOOTER CENTER -->
+
+        </footer>
+        <!-- FOOTER END -->
+
+    </div>
+
+    <!-- MAP FOR THE LOCATION BEGINNING-->
+    <script>
+        function myMap() {
+            const mapCanvas = document.getElementById("map");
+            const myCenter = new google.maps.LatLng(44.801829, 20.466637);
+            const mapOptions = {center: myCenter, zoom: 17  };
+            const map = new google.maps.Map(mapCanvas, mapOptions);
+            const marker = new google.maps.Marker({
+                position: myCenter,
+                animation: google.maps.Animation.BOUNCE
+            });
+            marker.setMap(map);
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwKgLSdSZEVdxRKKlImZu9GR77Gc_T9HQ&callback=myMap"></script>
+
+</body>
+</html>

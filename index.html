@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- DATE PICKER -->
+    <link href="css/datepicker_css/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="css/datepicker_css/datepicker.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery-ui-1.8.18.custom.min.js"></script>
+    <!-- DATE PICKER END-->
+
+    <!-- PAGE STYLE AND GOOGLE API FONT, GOOGLES MAP-->
+    <link rel="stylesheet" href="css/links/style-Arrangement.css">
+    <link rel="stylesheet" href="css/links/google-api-fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <!-- HEADER LOGO BEGINNING -->
+        <header class="header">
+
+            <a name="home"></a>
+            <div class="navigation-bar">
+                <div class="navigation-container">
+                    <img class="navigation-logo" style="width: 230px; height: 50px; margin-right: 450px;" src="img/logo3.png" alt="David Hotel Belgrade">
+
+                    <ul class="navigation">
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="html/room.html">ROOMS AND SUITES</a></li>
+                        <li><a href="html/contact.html">CONTACT US</a></li>
+                        <li><a href="html/booknow.html">BOOK ONLINE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+
+            <!-- AUTOMATIC SLIDESHOW START -->
+
+            <div class="slideshow-container" style="background-color: #344a71;">
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="img/slavija1_files/backgroundAnimation1.jpg" style="width:100%; height: 600px">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="img/slavija1_files/backgroundAnimation2.jpg" style="width:100%; height: 600px">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="img/slavija1_files/backgroundAnimation3.jpg" style="width:100%; height: 600px">
+                </div>
+
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img src="img/slavija1_files/backgroundAnimation5.jpg" style="width:100%; height: 600px">
+                </div>
+
+            </div>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <!-- AUTOMATIC SLIDESHOW END -->
+
+            <br><br>
+
+            <span style="color: #ffff00; font-size: 17pt; line-height: 0.9;">CHECK RATES &amp; AVAILABILITY</span><br><br><br>
+            <div class="w3-row-padding">
+
+                <div class="w3-col m3" >
+                    <label><i class="fa fa-calendar-o"></i> Check In</label>
+                    <input class="w3-input w3-border" id="datecheckin" type="text" maxlength="10" placeholder="DD MM YYYY" size="8">
+                </div>
+                <div class="w3-col m3">
+                    <label><i class="fa fa-calendar-o"></i> Check Out</label>
+                    <input class="w3-input w3-border" id="datecheckout" maxlength="10" placeholder="DD MM YYYY" size="8">
+                </div>
+                <div class="w3-col m2">
+                    <label><i class="fa fa-male"></i> Adults</label>
+                    <input class="w3-input w3-border" type="number" min="0" max="4" placeholder="1">
+                </div>
+                <div class="w3-col m2">
+                    <label><i class="fa fa-child"></i> Kids</label>
+                    <input class="w3-input w3-border" type="number" min="0" max="4" placeholder="0">
+                </div>
+                <div class="w3-col m2">
+                    <label><i class="fa fa-search"></i> Search</label>
+                    <button class="w3-button w3-block w3-black">Search</button>
+                </div>
+            </div>
+            <br><br><br><br><br>
+
+        </header>
+        <!-- HEADER LOGO END -->
+
+
+
+        <!-- FOOTER BEGINNING -->
+        <footer class="footer">
+
+
+            <!-- FOOTER CENTER -->
+            <div class="footer_center">
+                <div class="text">
+                    <h4>CONTACT INFORMATION</h4>
+                    <a name="contact"></a>
+                    <p style="margin-top: 0; padding-top: 5px;"><i></i> Danijelova 32, 11000 Belgrade, Serbia</p>
+                    <p><i class="phone"></i> <a href="tel:+381623340023">+381 623 340 023</a></p>
+                    <p><i class="mail"></i> <a href="mailto:office@davidhotel.com">office@davidhotel.com</a></p>
+                    <p>@2018 DAVID'S HOTEL</p>
+                </div>
+            </div>
+            <!-- END / FOOTER CENTER -->
+
+        </footer>
+        <!-- FOOTER END -->
+
+    </div>
+
+    <!-- DATE PICKER FOR MAP -->
+
+    <script type="text/javascript">
+        $(function(){
+            $('#datecheckin').datepicker({
+                inline: true,
+                //nextText: '&rarr;',
+                //prevText: '&larr;',
+                showOtherMonths: true,
+                //dateFormat: 'dd MM yy',
+                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                //showOn: "button",
+                //buttonImage: "img/calendar-blue.png",
+                //buttonImageOnly: true,
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            $('#datecheckout').datepicker({
+                inline: true,
+                //nextText: '&rarr;',
+                //prevText: '&larr;',
+                showOtherMonths: true,
+                //dateFormat: 'dd MM yy',
+                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                //showOn: "button",
+                //buttonImage: "img/calendar-blue.png",
+                //buttonImageOnly: true,
+            });
+        });
+    </script>
+
+    <!-- END OF DATE PICKER FOR MAP -->
+
+    <!-- MAP FOR THE LOCATION BEGINNING-->
+    <script>
+        function myMap() {
+            const mapCanvas = document.getElementById("map");
+            const myCenter = new google.maps.LatLng(44.801829, 20.466637);
+            const mapOptions = {center: myCenter, zoom: 15};
+            const map = new google.maps.Map(mapCanvas, mapOptions);
+            const marker = new google.maps.Marker({
+                position: myCenter,
+                animation: google.maps.Animation.BOUNCE
+            });
+            marker.setMap(map);
+        }
+    </script>
+
+    <script src="javascript/googleMap.js"></script>
+    <!-- MAP FOR THE LOCATION END-->
+
+    <!-- AUTOMATIC SLIDESHOW START -->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+    </script>
+    <!-- AUTOMATIC SLIDESHOW END -->
+</body>
+</html>
