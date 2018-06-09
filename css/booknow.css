@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: #444444;
-    text-align: center;
+    text-align: left;
     -webkit-text-size-adjust: 100%;
 
 }
@@ -53,16 +53,21 @@ body {
 
 .main {
     text-align: left;
-    text-justify: auto;
     background: #ffffff;
+    width: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .aside-1 {
     background:	#ffffff;
+    width: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .aside-2 {
     background:	#ffffff;
+    width: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media all and (min-width: 600px) {
@@ -181,6 +186,7 @@ input{
 }
 
 
+
 /* Select */
 select{
     background-color: #344a71;
@@ -188,7 +194,7 @@ select{
     border: 1px solid #ffffff;
     padding: 10px;
     font-size: 16px;
-    color: #ffffff;
+    color: #a4a6aa;
 }
 
 
