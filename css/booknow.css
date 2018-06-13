@@ -1,3 +1,4 @@
+/*<!-- COPYRIGHT 2018 - DAVID PRAISE CHUKWUMA KALU 2017/230266 -->*/
 html,
 body {
     margin: 0;
@@ -54,19 +55,19 @@ body {
 .main {
     text-align: left;
     background: #ffffff;
-    width: 50px;
+    padding-right: 280px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .aside-1 {
     background:	#ffffff;
-    width: 50px;
+    width: 120px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .aside-2 {
     background:	#ffffff;
-    width: 50px;
+    width: 120px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
