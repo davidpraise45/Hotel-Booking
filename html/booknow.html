@@ -92,7 +92,8 @@
         // validate the room
         function validateSelect(select) {
             //check if the city was selected
-            if (document.getElementById(select).value === "-1") {
+            var dropdown = document.getElementById(select);
+            if (dropdown.value === "-1") {
                 return false;
             }
         }
@@ -158,8 +159,8 @@
                             <label>Name</label>
                             <span> *</span>
                             <div>
-                                <input type="text" id="firstname" placeholder="First Name" style="margin-top: 3px;">
-                                <input type="text" id="lastname" placeholder="Last Name" style="margin-top: 10px;">
+                                <input type="text" id="firstname" placeholder="First Name" required style="margin-top: 3px;">
+                                <input type="text" id="lastname" placeholder="Last Name" required style="margin-top: 10px;">
                             </div>
                         </li>
                         <br>
@@ -169,7 +170,7 @@
                             <label>Email</label>
                             <span> *</span>
                             <div>
-                                <input type="text" id="email" placeholder="Email Address" size="30">
+                                <input type="text" id="email" required placeholder="Email Address" size="30">
                             </div>
                         </li>
                         <br>
@@ -179,7 +180,7 @@
                             <label>Room Type</label>
                             <span> *</span>
                             <div>
-                                <select name="roomtype" id="room">
+                                <select name="roomtype" id="room" required>
                                     <option selected disabled value="-1">Pick a room</option>
                                     <option value="1">Ambassador Suite</option>
                                     <option value="2">Junior Suite</option>
@@ -197,7 +198,7 @@
                             <label>Number of Guests</label>
                             <span> *</span>
                             <div>
-                                <select name="guest" id="guest">
+                                <select name="guest" id="guest" required>
                                     <option selected disabled value="-1">Number of Guest</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -215,7 +216,7 @@
                             <label>Number of Childrens</label>
                             <span> *</span>
                             <div>
-                                <select name="guest" id="children">
+                                <select name="guest" id="children" required>
                                     <option selected disabled value="-1">Number of Children</option>
                                     <option value="0">0</option>
                                     <option value="1">1</option>
@@ -236,7 +237,7 @@
                             <!-- Day, Month, Year -->
                             <div id="birthday" data-name="birthday_wrapper">
                                 <span id="birthday-tag-span">
-                                    <select aria-label="Day" name="birthday_day" id="day" title="Day" autocomplete="on">
+                                    <select aria-label="Day" name="birthday_day" id="day" title="Day" autocomplete="on" required>
                                         <option value="-1" selected disabled="">Day</option><option value="1">1</option><option
                                             value="2">2</option><option value="3">3</option><option value="4">4</option><option
                                             value="5">5</option><option value="6">6</option><option value="7">7</option><option
@@ -254,7 +255,7 @@
                                             value="30">30</option><option value="31">31</option>
                                     </select>
                                     <select aria-label="Month" name="birthday_month" id="month" title="Month"
-                                            autocomplete="on">
+                                            autocomplete="on" required>
                                         <option value="-1" selected disabled>Month</option><option
                                             value="1">Jan</option><option value="2">Feb</option><option
                                             value="3">Mar</option><option value="4">Apr</option><option
@@ -264,7 +265,7 @@
                                             value="11">Nov</option><option value="12">Dec</option>
                                     </select>
                                     <select aria-label="Year" name="birthday_year" id="year" title="Year"
-                                            autocomplete="on">
+                                            autocomplete="on" required>
                                         <option value="-1" selected disabled="">Year</option><option
                                             value="2018">2018</option><option value="2017">2017</option><option
                                             value="2016">2016</option><option value="2015">2015</option><option
@@ -330,7 +331,7 @@
 
                                 <!-- TIME -->
 
-                                <select class="currentTime" id="hour">
+                                <select class="currentTime" id="hour" required>
                                     <option value="-1" selected disabled>Hour</option>
                                     <option value="1"> 1 </option>
                                     <option value="2"> 2 </option>
@@ -349,7 +350,7 @@
 
                                 <!-- Minutes -->
                                 <span class="form-sub-label-container" style="vertical-align:top">
-                                    <select id="minute">
+                                    <select id="minute" required>
                                         <option value="-1" selected disabled="">Minutes</option><option
                                             value="1">1</option><option value="2">2</option><option value="3">3</option><option
                                             value="4">4</option><option value="5">5</option><option value="6">6</option><option
@@ -371,7 +372,7 @@
                                  </span>
 
                                 <span style="vertical-align:top">
-                                    <select id="timePeriod">
+                                    <select id="timePeriod" required>
                                         <option value="-1" selected disabled>AM & PM</option>
                                         <option value="AM"> AM </option>
                                         <option value="PM"> PM </option>
@@ -389,7 +390,7 @@
                             <div id="departure_birthday" data-name="birthday_wrapper">
                                 <span id="departure_birthday-tag-span">
                                     <select aria-label="Day" name="birthday_day" id="departure_day" title="Day"
-                                            autocomplete="on">
+                                            autocomplete="on" required>
                                         <option value="-1" selected disabled="">Day</option><option value="1">1</option><option
                                             value="2">2</option><option value="3">3</option><option value="4">4</option><option
                                             value="5">5</option><option value="6">6</option><option value="7">7</option><option
@@ -407,7 +408,7 @@
                                             value="30">30</option><option value="31">31</option>
                                     </select>
                                     <select aria-label="Month" name="birthday_month" id="departure_month" title="Month"
-                                            autocomplete="on">
+                                            autocomplete="on" required>
                                         <option value="-1" selected disabled>Month</option><option
                                             value="1">Jan</option><option value="2">Feb</option><option
                                             value="3">Mar</option><option value="4">Apr</option><option
@@ -417,7 +418,7 @@
                                             value="11">Nov</option><option value="12">Dec</option>
                                     </select>
                                     <select aria-label="Year" name="birthday_year" id="departure_year" title="Year"
-                                            autocomplete="on">
+                                            autocomplete="on" required>
                                         <option value="-1" selected disabled="">Year</option><option
                                             value="2018">2018</option><option value="2017">2017</option><option
                                             value="2016">2016</option><option value="2015">2015</option><option
@@ -483,7 +484,7 @@
 
                                 <!-- TIME -->
 
-                                <select class="currentTime" id="departure_hour">
+                                <select class="currentTime" id="departure_hour" required>
                                     <option value="-1" selected disabled>Hour</option>
                                     <option value="1"> 1 </option>
                                     <option value="2"> 2 </option>
@@ -502,7 +503,7 @@
 
                                 <!-- Minutes -->
                                 <span class="form-sub-label-container" style="vertical-align:top">
-                                    <select id="departure_minute">
+                                    <select id="departure_minute" required>
                                         <option value="-1" selected disabled="">Minutes</option><option
                                             value="1">1</option><option value="2">2</option><option value="3">3</option><option
                                             value="4">4</option><option value="5">5</option><option value="6">6</option><option
@@ -524,7 +525,7 @@
                                  </span>
 
                                 <span style="vertical-align:top">
-                                    <select id="timeperiodDeparture">
+                                    <select id="timeperiodDeparture" required>
                                         <option value="-1" selected disabled>AM & PM</option>
                                         <option value="AM"> AM </option>
                                         <option value="PM"> PM </option>
@@ -539,7 +540,7 @@
                             <span> *</span>
                             <div>
                                 <span style="vertical-align:top">
-                                    <select id="freePickUp">
+                                    <select id="freePickUp" required>
                                         <option value="-1" selected disabled>Free Pickup</option>
                                         <option value="AM"> Yes Please! - Pick me up on arrival </option>
                                         <option value="PM"> No Thanks - I'll make my own way there </option>
@@ -553,7 +554,7 @@
                             <label>Passport Number</label>
                             <span> *</span>
                             <div>
-                                <input type="text" placeholder="A11163131">
+                                <input type="text" placeholder="A11163131" required>
                             </div>
                         </li>
                         <br>
