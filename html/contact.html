@@ -89,6 +89,64 @@
             background: #344a71;
         }
     </style>
+    <script>
+        // Validate my form
+        function validateForm() {
+            //checking the firstname
+            validateName('firstname');
+
+            //check email
+            validateEmailAddress('email');
+
+            //check message text
+            validateName('message');
+
+        }
+
+        // validate my email
+        function validateEmailAddress(email) {
+            //check email
+            var email = document.getElementById(email);
+            if (email.value === "") {
+                email.focus();
+                return false;
+            } else {
+                //validate email
+                var regExpEmail =
+                    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if (!regExpEmail.test(email.value)) {
+                    alert("Email is not in correct format");
+                    email.focus();
+                    return false;
+                }
+            }
+        }
+
+        // validate the input name
+        function validateName(targetId) {
+            //checking the firstname
+            var name = document.getElementById(targetId);
+            var regExpFirstName = /^[A-Z][a-z]+$/i;
+            if (name.value === "") {
+                name.focus();
+                return false;
+            } else {
+                if (!regExpFirstName.test(name.value)) {
+                    alert("Please enter name in correct format");
+                    name.focus();
+                    return false;
+                }
+            }
+        }
+
+        function formSubmitedNotification() {
+            if(validateForm() === true){
+                alert('Your booking has been approved.');
+                return true;
+            }
+        }
+
+    </script>
 </head>
 <body>
 
@@ -97,7 +155,7 @@
         <header class="header">
             <div class="navigation-bar">
                 <div class="navigation-container">
-                    <img class="navigation-logo" style="width: 230px; height: 50px; margin-right: 450px;" src="../img/logo3.png" alt="David Hotel Belgrade">
+                    <a href="../index.html"><img class="navigation-logo" style="width: 230px; height: 50px; margin-right: 650px;" src="../img/logo3.png" alt="David Hotel Belgrade"></a>
 
                     <ul class="navigation">
                         <li><a href="../index.html">HOME</a></li>
@@ -115,30 +173,32 @@
 
 
         <article class="main">
-            <div class="w3-content" style="max-width:1532px;">
+            <div class="w3-content" style="max-width:1532px; padding: 15px 15px 15px 15px; margin-top: 20px;">
                 <br>
 
                 <!-- ABOUT US & LOCATION-->
-                <div class="w3-row-padding" id="about">
+                <div class="w3-row-padding" id="about" style="box-shadow: 0 0 15px #3f51b5; margin-top: 30px; padding: 0px 10px 20px 10px;">
                     <div>
-                        <h2 style="color: #344a71" >DAVID'S HOTEL SERBIA</h2>
+                        <p style="color: #344a71; font-size: 27pt; text-align: center; margin-top: 25px" >DAVID'S HOTEL SERBIA</p>
                     </div>
-                    <br>
-                    <!-- MAP BEGINNING -->
-                    <div id="map" style="height:500px; width: 100%;"></div>
-                    <!-- MAP END -->
-                    <br><br>
-                    <div class="form-style-6">
-                        <h1>Contact Us</h1>
-                        <form>
 
-                            <input type="text" name="field1" placeholder="Your Name">
-                            <input type="email" name="field2" placeholder="Email Address">
-                            <textarea name="field3" placeholder="Type your Message"></textarea>
-                            <input type="submit" value="Send">
-                        </form>
+                    <div style="display: flex">
+                        <!-- MAP BEGINNING -->
+                        <div id="map" style="height:500px; width: 100%; margin-top: 25px; margin-right: 20px"></div>
+                        <!-- MAP END -->
+                        <br><br>
+                        <div class="form-style-6" style="width: 80%; height: 500px; margin-right: 10px">
+                            <h1>Contact Us</h1>
+                            <form method="post" onsubmit="return validateForm();">
+
+                                <input type="text" name="field1" required id="name" placeholder="Your Name">
+                                <input type="email" name="field2" required id="email" placeholder="Email Address">
+                                <textarea name="field3" id="message" required placeholder="Type your Message"></textarea>
+                                <input type="submit" value="Send">
+                            </form>
+                        </div>
+                        <br><br>
                     </div>
-                    <br><br>
                 </div>
              <!-- End page content -->
             </div>
@@ -162,7 +222,7 @@
             <!-- FOOTER CENTER -->
             <div class="footer_center">
                 <div class="text">
-                    <h4>CONTACT INFORMATION</h4>
+                    <p>CONTACT INFORMATION</p>
                     <a name="contact"></a>
                     <p style="margin-top: 0; padding-top: 5px;"><i></i> Danijelova 32, 11000 Belgrade, Serbia</p>
                     <p><i class="phone"></i> <a href="tel:+381623340023">+381 623 340 023</a></p>

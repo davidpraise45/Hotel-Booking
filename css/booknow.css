@@ -5,8 +5,9 @@ body {
     background: #444444;
     text-align: left;
     -webkit-text-size-adjust: 100%;
-
+    zoom: normal;
 }
+
 
 @font-face {
     font-family: "Hind";
@@ -53,21 +54,21 @@ body {
 
 .main {
     text-align: left;
-    background: #ffffff;
-    width: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #d3d5e8;
+    padding-right: 280px;
+    box-shadow: 0 0 15px #3f51b5;
 }
 
 .aside-1 {
-    background:	#ffffff;
-    width: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background:	#d3d5e8;
+    width: 120px;
+    box-shadow: 0 0 15px #3f51b5;
 }
 
 .aside-2 {
-    background:	#ffffff;
-    width: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background:	#d3d5e8;
+    width: 120px;
+    box-shadow: 0 0 15px #3f51b5;
 }
 
 @media all and (min-width: 600px) {
@@ -173,7 +174,7 @@ body {
 /** Content of the page **/
 input{
     height: 40px;
-    background-color: #344a71;
+    background-color: #637ba5;
     margin: 0 auto;
     margin-left: 20px;
     padding-left: 15px;
@@ -189,12 +190,12 @@ input{
 
 /* Select */
 select{
-    background-color: #344a71;
+    background-color: #637ba5;
     border-radius: 10px;
     border: 1px solid #ffffff;
     padding: 10px;
     font-size: 16px;
-    color: #a4a6aa;
+    color: #ffffff;
 }
 
 
@@ -204,7 +205,7 @@ a {
 
 label{
     color: #444444;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 h1 {
@@ -230,18 +231,22 @@ button{
     border-radius: 10px;
 }
 
+span {
+    color: #FF0000;
+}
+
 
 /*********** PLACE HOLDER COLOR ***/
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: #ffffff;
+    color: #FFFFFF;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-    color: #ffffff;
+    color: #FFFFFF;
 }
 :-ms-input-placeholder { /* IE 10+ */
-    color: #ffffff;
+    color: #FFFFFF;
 }
 :-moz-placeholder { /* Firefox 18- */
-    color: #ffffff;
+    color: #FFFFFF;
 }
 /*********** PLACE HOLDER COLOR ***/

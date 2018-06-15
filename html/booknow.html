@@ -34,7 +34,6 @@
             validateSelect('month');
             validateSelect('year');
             validateSelect('hour');
-            validateSelect('minute');
             validateSelect('timePeriod');
 
             /* Departure validation */
@@ -42,7 +41,6 @@
             validateSelect('departure_month');
             validateSelect('departure_year');
             validateSelect('departure_hour');
-            validateSelect('departure_minute');
             validateSelect('timeperiodDeparture');
 
 
@@ -108,10 +106,17 @@
                 return false;
             } else {
                 if (!regExPassportNumber.test(passportNo.value)) {
-                    alert("Please enter name in correct format");
+                    alert("Please enter passport number in correct format");
                     passportNo.focus();
                     return false;
                 }
+            }
+        }
+
+        function formSubmitedNotification() {
+            if(validateForm() === true){
+                alert('Your booking has been approved.');
+                return true;
             }
         }
 
@@ -127,7 +132,7 @@
             <a name="home"></a>
             <div class="navigation-bar">
                 <div class="navigation-container">
-                    <img class="navigation-logo" style="width: 230px; height: 50px; margin-right: 450px;" src="../img/logo3.png" alt="David Hotel Belgrade">
+                    <a href="../index.html"><img class="navigation-logo" style="width: 230px; height: 50px; margin-right: 650px;" src="../img/logo3.png" alt="David Hotel Belgrade"></a>
 
                     <ul class="navigation">
                         <li><a href="../index.html">HOME</a></li>
@@ -142,100 +147,101 @@
         </header>
 
         <article class="main">
-            <form action="" method="post" id="book_reservation" onsubmit="validateForm()">
-                <div class="form-all">
-                    <ul>
-                        <!-- HEADER -->
-                        <br>
-                        <li>
-                            <h1 class="form-header" style="color: #344a71">
-                                Hotel Booking
-                            </h1>
-                        </li>
-                        <br>
+            <div style="padding: 15px 15px 15px 15px;">
+                <form action="" method="post" id="book_reservation" onsubmit="validateForm()">
+                    <div class="form-all">
+                        <ul>
+                            <!-- HEADER -->
+                            <br>
+                            <li>
+                                <h1 class="form-header" style="color: #3e61a0">
+                                    Hotel Booking
+                                </h1>
+                            </li>
+                            <br>
 
-                        <!-- NAME AND LASTNAME -->
-                        <li>
-                            <label>Name</label>
-                            <span> *</span>
-                            <div>
-                                <input type="text" id="firstname" placeholder="First Name" required style="margin-top: 3px;">
-                                <input type="text" id="lastname" placeholder="Last Name" required style="margin-top: 10px;">
-                            </div>
-                        </li>
-                        <br>
+                            <!-- NAME AND LASTNAME -->
+                            <li>
+                                <label>Name</label>
+                                <span> *</span>
+                                <div>
+                                    <input type="text" id="firstname" placeholder="First Name" required style="margin-top: 3px;">
+                                    <input type="text" id="lastname" placeholder="Last Name" required style="margin-top: 10px;">
+                                </div>
+                            </li>
+                            <br>
 
-                        <!-- EMAIL -->
-                        <li>
-                            <label>Email</label>
-                            <span> *</span>
-                            <div>
-                                <input type="text" id="email" required placeholder="Email Address" size="30">
-                            </div>
-                        </li>
-                        <br>
+                            <!-- EMAIL -->
+                            <li>
+                                <label>Email</label>
+                                <span> *</span>
+                                <div>
+                                    <input type="text" id="email" required placeholder="Email Address" size="30">
+                                </div>
+                            </li>
+                            <br>
 
-                        <!-- ROOM TYPE -->
-                        <li>
-                            <label>Room Type</label>
-                            <span> *</span>
-                            <div>
-                                <select name="roomtype" id="room" required>
-                                    <option selected disabled value="-1">Pick a room</option>
-                                    <option value="1">Ambassador Suite</option>
-                                    <option value="2">Junior Suite</option>
-                                    <option value="3">Premium Suite</option>
-                                    <option value="5">Premium Suite</option>
-                                    <option value="4">Family Room</option>
-                                    <option value="6">Premium Plus</option>
-                                </select>
-                            </div>
-                        </li>
-                        <br>
+                            <!-- ROOM TYPE -->
+                            <li>
+                                <label>Room Type</label>
+                                <span> *</span>
+                                <div>
+                                    <select name="roomtype" id="room" required>
+                                        <option selected disabled value="-1">Pick a room</option>
+                                        <option value="1">Ambassador Suite</option>
+                                        <option value="2">Junior Suite</option>
+                                        <option value="3">Premium Suite</option>
+                                        <option value="5">Premium Suite</option>
+                                        <option value="4">Family Room</option>
+                                        <option value="6">Premium Plus</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <br>
 
-                        <!-- #NO OF GUEST -->
-                        <li>
-                            <label>Number of Guests</label>
-                            <span> *</span>
-                            <div>
-                                <select name="guest" id="guest" required>
-                                    <option selected disabled value="-1">Number of Guest</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="5">4</option>
-                                    <option value="4">5</option>
-                                    <option value="6">6</option>
-                                </select>
-                            </div>
-                        </li>
-                        <br>
+                            <!-- #NO OF GUEST -->
+                            <li>
+                                <label>Number of Guests</label>
+                                <span> *</span>
+                                <div>
+                                    <select name="guest" id="guest" required>
+                                        <option selected disabled value="-1">Number of Guest</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="5">4</option>
+                                        <option value="4">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <br>
 
-                        <!-- #NO OF CHILDREN -->
-                        <li>
-                            <label>Number of Childrens</label>
-                            <span> *</span>
-                            <div>
-                                <select name="guest" id="children" required>
-                                    <option selected disabled value="-1">Number of Children</option>
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="5">4</option>
-                                    <option value="4">5</option>
-                                    <option value="6">6</option>
-                                </select>
-                            </div>
-                        </li>
-                        <br>
+                            <!-- #NO OF CHILDREN -->
+                            <li>
+                                <label>Number of Childrens</label>
+                                <span> *</span>
+                                <div>
+                                    <select name="guest" id="children" required>
+                                        <option selected disabled value="-1">Number of Children</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="5">4</option>
+                                        <option value="4">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <br>
 
-                        <!-- ARRIVAL TIME AND DATE -->
-                        <li>
-                            <label>Arrival Date & Time</label>
-                            <span> *</span>
-                            <!-- Day, Month, Year -->
-                            <div id="birthday" data-name="birthday_wrapper">
+                            <!-- ARRIVAL TIME AND DATE -->
+                            <li>
+                                <label>Arrival Date & Time</label>
+                                <span> *</span>
+                                <!-- Day, Month, Year -->
+                                <div id="birthday" data-name="birthday_wrapper">
                                 <span id="birthday-tag-span">
                                     <select aria-label="Day" name="birthday_day" id="day" title="Day" autocomplete="on" required>
                                         <option value="-1" selected disabled="">Day</option><option value="1">1</option><option
@@ -327,67 +333,44 @@
                                     </select>
                                 </span>
 
-                                <span class="date-separate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="date-separate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
-                                <!-- TIME -->
+                                    <!-- TIME -->
 
-                                <select class="currentTime" id="hour" required>
-                                    <option value="-1" selected disabled>Hour</option>
-                                    <option value="1"> 1 </option>
-                                    <option value="2"> 2 </option>
-                                    <option value="3"> 3 </option>
-                                    <option value="4"> 4 </option>
-                                    <option value="5"> 5 </option>
-                                    <option value="6"> 6 </option>
-                                    <option value="7"> 7 </option>
-                                    <option value="8"> 8 </option>
-                                    <option value="9"> 9 </option>
-                                    <option value="10"> 10 </option>
-                                    <option value="11"> 11 </option>
-                                    <option value="12"> 12 </option>
-                                </select>
-                                <span class="date-separate">&nbsp;:</span>
-
-                                <!-- Minutes -->
-                                <span class="form-sub-label-container" style="vertical-align:top">
-                                    <select id="minute" required>
-                                        <option value="-1" selected disabled="">Minutes</option><option
-                                            value="1">1</option><option value="2">2</option><option value="3">3</option><option
-                                            value="4">4</option><option value="5">5</option><option value="6">6</option><option
-                                            value="7">7</option><option value="8">8</option><option value="9">9</option><option
-                                            value="10">10</option><option value="11">11</option><option
-                                            value="12">12</option><option value="13">13</option><option
-                                            value="14">14</option><option value="15">15</option><option
-                                            value="16">16</option><option value="17">17</option><option
-                                            value="18">18</option><option value="19">19</option><option
-                                            value="20">20</option><option value="21">21</option><option
-                                            value="22">22</option><option value="23">23</option><option
-                                            value="24">24</option><option value="25">25</option><option
-                                            value="26">26</option><option value="27">27</option><option
-                                            value="28">28</option><option value="29">29</option><option
-                                            value="30">30</option><option value="31">31</option>
-                                        <option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+                                    <select class="currentTime" id="hour" required>
+                                        <option value="-1" selected disabled>Hour</option>
+                                        <option value="1"> 1 </option>
+                                        <option value="2"> 2 </option>
+                                        <option value="3"> 3 </option>
+                                        <option value="4"> 4 </option>
+                                        <option value="5"> 5 </option>
+                                        <option value="6"> 6 </option>
+                                        <option value="7"> 7 </option>
+                                        <option value="8"> 8 </option>
+                                        <option value="9"> 9 </option>
+                                        <option value="10"> 10 </option>
+                                        <option value="11"> 11 </option>
+                                        <option value="12"> 12 </option>
                                     </select>
-                                    <span class="date-separate">&nbsp;:</span> <!-- space -->
-                                 </span>
+                                    <span class="date-separate">&nbsp;:</span>
 
-                                <span style="vertical-align:top">
+                                    <span style="vertical-align:top">
                                     <select id="timePeriod" required>
                                         <option value="-1" selected disabled>AM & PM</option>
                                         <option value="AM"> AM </option>
                                         <option value="PM"> PM </option>
                                     </select>
                                 </span>
-                            </div>
-                        </li>
-                        <br>
+                                </div>
+                            </li>
+                            <br>
 
-                        <!-- DEPARTURE TIME AND DATE -->
-                        <li>
-                            <label>Departure Date & Time</label>
-                            <span> *</span>
-                            <!-- Day, Month, Year -->
-                            <div id="departure_birthday" data-name="birthday_wrapper">
+                            <!-- DEPARTURE TIME AND DATE -->
+                            <li>
+                                <label>Departure Date & Time</label>
+                                <span> *</span>
+                                <!-- Day, Month, Year -->
+                                <div id="departure_birthday" data-name="birthday_wrapper">
                                 <span id="departure_birthday-tag-span">
                                     <select aria-label="Day" name="birthday_day" id="departure_day" title="Day"
                                             autocomplete="on" required>
@@ -480,65 +463,42 @@
                                     </select>
                                 </span>
 
-                                <span class="date-separate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="date-separate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
-                                <!-- TIME -->
+                                    <!-- TIME -->
 
-                                <select class="currentTime" id="departure_hour" required>
-                                    <option value="-1" selected disabled>Hour</option>
-                                    <option value="1"> 1 </option>
-                                    <option value="2"> 2 </option>
-                                    <option value="3"> 3 </option>
-                                    <option value="4"> 4 </option>
-                                    <option value="5"> 5 </option>
-                                    <option value="6"> 6 </option>
-                                    <option value="7"> 7 </option>
-                                    <option value="8"> 8 </option>
-                                    <option value="9"> 9 </option>
-                                    <option value="10"> 10 </option>
-                                    <option value="11"> 11 </option>
-                                    <option value="12"> 12 </option>
-                                </select>
-                                <span class="date-separate">&nbsp;:</span>
-
-                                <!-- Minutes -->
-                                <span class="form-sub-label-container" style="vertical-align:top">
-                                    <select id="departure_minute" required>
-                                        <option value="-1" selected disabled="">Minutes</option><option
-                                            value="1">1</option><option value="2">2</option><option value="3">3</option><option
-                                            value="4">4</option><option value="5">5</option><option value="6">6</option><option
-                                            value="7">7</option><option value="8">8</option><option value="9">9</option><option
-                                            value="10">10</option><option value="11">11</option><option
-                                            value="12">12</option><option value="13">13</option><option
-                                            value="14">14</option><option value="15">15</option><option
-                                            value="16">16</option><option value="17">17</option><option
-                                            value="18">18</option><option value="19">19</option><option
-                                            value="20">20</option><option value="21">21</option><option
-                                            value="22">22</option><option value="23">23</option><option
-                                            value="24">24</option><option value="25">25</option><option
-                                            value="26">26</option><option value="27">27</option><option
-                                            value="28">28</option><option value="29">29</option><option
-                                            value="30">30</option><option value="31">31</option>
-                                        <option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+                                    <select class="currentTime" id="departure_hour" required>
+                                        <option value="-1" selected disabled>Hour</option>
+                                        <option value="1"> 1 </option>
+                                        <option value="2"> 2 </option>
+                                        <option value="3"> 3 </option>
+                                        <option value="4"> 4 </option>
+                                        <option value="5"> 5 </option>
+                                        <option value="6"> 6 </option>
+                                        <option value="7"> 7 </option>
+                                        <option value="8"> 8 </option>
+                                        <option value="9"> 9 </option>
+                                        <option value="10"> 10 </option>
+                                        <option value="11"> 11 </option>
+                                        <option value="12"> 12 </option>
                                     </select>
-                                    <span class="date-separate">&nbsp;:</span> <!-- space -->
-                                 </span>
+                                    <span class="date-separate">&nbsp;:</span>
 
-                                <span style="vertical-align:top">
+                                    <span style="vertical-align:top">
                                     <select id="timeperiodDeparture" required>
                                         <option value="-1" selected disabled>AM & PM</option>
                                         <option value="AM"> AM </option>
                                         <option value="PM"> PM </option>
                                     </select>
                                 </span>
-                            </div>
-                        </li>
-                        <br>
+                                </div>
+                            </li>
+                            <br>
 
-                        <li>
-                            <label>Free Pickup</label>
-                            <span> *</span>
-                            <div>
+                            <li>
+                                <label>Free Pickup</label>
+                                <span> *</span>
+                                <div>
                                 <span style="vertical-align:top">
                                     <select id="freePickUp" required>
                                         <option value="-1" selected disabled>Free Pickup</option>
@@ -546,34 +506,35 @@
                                         <option value="PM"> No Thanks - I'll make my own way there </option>
                                     </select>
                                 </span>
-                            </div>
-                        </li>
-                        <br>
+                                </div>
+                            </li>
+                            <br>
 
-                        <li>
-                            <label>Passport Number</label>
-                            <span> *</span>
-                            <div>
-                                <input type="text" placeholder="A11163131" required>
-                            </div>
-                        </li>
-                        <br>
+                            <li>
+                                <label>Passport Number</label>
+                                <span> *</span>
+                                <div>
+                                    <input type="text" placeholder="A11163131" required>
+                                </div>
+                            </li>
+                            <br>
 
-                        <li>
-                            <label>Special Request [ Optional ]</label>
-                            <div>
-                                <textarea class="form-textarea" cols="35" rows="4" data-component="textarea" placeholder="Additional Information"></textarea>
-                            </div>
-                        </li>
-                        <br>
+                            <li>
+                                <label>Special Request [ Optional ]</label>
+                                <div>
+                                    <textarea class="form-textarea" cols="35" rows="4" data-component="textarea" placeholder="Additional Information"></textarea>
+                                </div>
+                            </li>
+                            <br>
 
-                        <li>
-                            <button style="font-size: 15pt" >Submit</button>
-                        </li>
-                        <br><br>
-                    </ul>
-                </div>
-            </form>
+                            <li>
+                                <button style="font-size: 15pt; border-color: #3e61a0" onclick="formSubmitedNotification()" onsubmit="return validateForm();">Submit</button>
+                            </li>
+                            <br><br>
+                        </ul>
+                    </div>
+                </form>
+            </div>
         </article>
 
 
@@ -593,7 +554,7 @@
             <!-- FOOTER CENTER -->
             <div class="footer_center">
                 <div class="text">
-                    <h4>CONTACT INFORMATION</h4>
+                    <p>CONTACT INFORMATION</p>
                     <a name="contact"></a>
                     <p style="margin-top: 0; padding-top: 5px;"><i></i> Danijelova 32, 11000 Belgrade, Serbia</p>
                     <p><i class="phone"></i> <a href="tel:+381623340023">+381 623 340 023</a></p>

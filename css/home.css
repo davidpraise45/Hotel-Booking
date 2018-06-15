@@ -5,7 +5,7 @@ body {
     background: #444444;
     text-align: center;
     -webkit-text-size-adjust: 100%;
-
+    zoom: normal;
 }
 
 @font-face {
@@ -53,6 +53,7 @@ body {
 .main {
     text-align: left;
     text-justify: auto;
+    padding-right: 10px;
     background: #ffffff;
 }
 
@@ -62,6 +63,10 @@ body {
 
 .aside-2 {
     background:	#ffffff;
+}
+
+button{
+    font-size: 15px;
 }
 
 @media all and (min-width: 600px) {
