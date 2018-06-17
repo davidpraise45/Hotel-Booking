@@ -21,10 +21,11 @@ body {
 
 
 .navigation-bar ul {
-    padding: 4px;
+    padding: 5px;
     margin-bottom: 0px;
     text-align: right;
     float: right;
+    font-size: 13.5px;
 }
 
 /* ------------- WHOLE LAYOUT OF THE PAGE------------------*/
@@ -54,19 +55,19 @@ body {
 
 .main {
     text-align: left;
-    background: #d3d5e8;
+    background: #ffff4d;
     padding-right: 280px;
     box-shadow: 0 0 15px #3f51b5;
 }
 
 .aside-1 {
-    background:	#d3d5e8;
+    background:	#ffffff;
     width: 120px;
     box-shadow: 0 0 15px #3f51b5;
 }
 
 .aside-2 {
-    background:	#d3d5e8;
+    background:	#ffffff;
     width: 120px;
     box-shadow: 0 0 15px #3f51b5;
 }
@@ -176,8 +177,6 @@ input{
     height: 40px;
     background-color: #637ba5;
     margin: 0 auto;
-    margin-left: 20px;
-    padding-left: 15px;
     -moz-border-radius: 25px;
     border-radius: 10px;
     font-size: 13pt; /** Increase the placeholder size **/
