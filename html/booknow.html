@@ -55,7 +55,7 @@
             //check email
             var email = document.getElementById(email);
             if (email.value === "") {
-                email.focus();
+                alert("Your Email Address must be filled out");
                 return false;
             } else {
                 //validate email
@@ -73,13 +73,13 @@
         function validateName(targetId) {
             //checking the firstname
             var name = document.getElementById(targetId);
-            var regExpFirstName = /^[A-Z][a-z]+$/i;
+            var regExpFirstName = /^[A-Z][a-z]+$/;
             if (name.value === "") {
-                name.focus();
+                alert(targetId+" must be filled out");
                 return false;
             } else {
                 if (!regExpFirstName.test(name.value)) {
-                    alert("Please enter name in correct format");
+                    alert("Please enter "+targetId+" in correct format");
                     name.focus();
                     return false;
                 }
@@ -91,6 +91,7 @@
             //check if the city was selected
             var dropdown = document.getElementById(select);
             if (dropdown.value === "-1") {
+                alert("Please select any options from "+select);
                 return false;
             }
         }
@@ -101,7 +102,7 @@
             var regExPassportNumber = /^(?!^0+$)[a-zA-Z0-9]{3,20}$/;
 
             if (passportNo.value === "") {
-                passportNo.focus();
+                alert("Passport Number must be filled out");
                 return false;
             } else {
                 if (!regExPassportNumber.test(passportNo.value)) {
@@ -109,13 +110,6 @@
                     passportNo.focus();
                     return false;
                 }
-            }
-        }
-
-        function formSubmitedNotification() {
-            if(validateForm() === true){
-                alert('Your booking has been approved.');
-                return true;
             }
         }
 
@@ -415,7 +409,7 @@
                             <br>
 
                             <li>
-                                <button style="font-size: 15pt; border-color: #3e61a0" onclick="formSubmitedNotification()" onsubmit="return validateForm();">Submit</button>
+                                <button style="font-size: 15pt; border-color: #3e61a0">Submit</button>
                             </li>
                             <br><br>
                         </ul>
