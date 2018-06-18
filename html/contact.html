@@ -28,7 +28,7 @@
             //check email
             var email = document.getElementById(email);
             if (email.value === "") {
-                email.focus();
+                alert("Your Email Address must be filled out");
                 return false;
             } else {
                 //validate email
@@ -46,25 +46,19 @@
         function validateName(targetId) {
             //checking the firstname
             var name = document.getElementById(targetId);
-            var regExpFirstName = /^[A-Z][a-z]+$/i;
+            var regExpFirstName = /^[A-Z][a-z]+$/;
             if (name.value === "") {
-                name.focus();
+                alert(targetId+" must be filled out");
                 return false;
             } else {
                 if (!regExpFirstName.test(name.value)) {
-                    alert("Please enter name in correct format");
+                    alert("Please enter "+targetId+" in correct format");
                     name.focus();
                     return false;
                 }
             }
         }
 
-        function formSubmitedNotification() {
-            if(validateForm() === true){
-                alert('Your booking has been approved.');
-                return true;
-            }
-        }
 
     </script>
 </head>
